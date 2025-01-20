@@ -7,10 +7,7 @@ function App() {
 		<>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
-				<Route
-					path='/*'
-					element={<Navigate to={`${import.meta.env.BASE_URL}`} replace />}
-				/>
+				<Route path='/*' element={<Navigate to='/' replace />} />
 				<Route path='/favorite' element={<FavoritePage />} />
 			</Routes>
 		</>
