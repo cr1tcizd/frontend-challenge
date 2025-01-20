@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import HomePage from './pages/HomePage'
 import FavoritePage from './pages/FavoritePage'
 
@@ -7,7 +7,7 @@ function App() {
 		<>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
-				<Route path='/*' element={<HomePage />} />
+				<Route path='/*' element={<Navigate to='/' replace />} />
 				<Route path='/favorite' element={<FavoritePage />} />
 			</Routes>
 		</>

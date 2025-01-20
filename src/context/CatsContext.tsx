@@ -24,7 +24,6 @@ export const CatsProvider = ({ children }: { children: ReactNode }) => {
 				.map((id, index, final) => (final.indexOf(id) === index ? index : -1))
 				.filter(index => index !== -1)
 				.map(index => currentCats[index])
-			console.log(unique)
 			setCats(unique)
 		})
 	}
