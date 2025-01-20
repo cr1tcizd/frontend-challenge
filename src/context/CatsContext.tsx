@@ -21,9 +21,9 @@ export const CatsProvider = ({ children }: { children: ReactNode }) => {
 			currentCats = [...cats, ...data]
 			const unique = currentCats
 				.map(e => e.id)
-				.map((e, i, final) => final.indexOf(e) === i && i)
-				.filter(e => currentCats[e])
-				.map(e => currentCats[e])
+				.map((id, index, final) => (final.indexOf(id) === index ? index : -1))
+				.filter(index => index !== -1)
+				.map(index => currentCats[index])
 			console.log(unique)
 			setCats(unique)
 		})
