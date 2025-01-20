@@ -6,15 +6,12 @@ function App() {
 	return (
 		<>
 			<Routes>
-				<Route path={`${import.meta.env.BASE_URL}`} element={<HomePage />} />
+				<Route path='frontend-challenge/' element={<HomePage />} />
 				<Route
-					path={`${import.meta.env.BASE_URL}/*`}
+					path='frontend-challenge/*'
 					element={<Navigate to={`${import.meta.env.BASE_URL}`} replace />}
 				/>
-				<Route
-					path={`${import.meta.env.BASE_URL}/favorite`}
-					element={<FavoritePage />}
-				/>
+				<Route path='frontend-challenge/favorite' element={<FavoritePage />} />
 			</Routes>
 		</>
 	)
