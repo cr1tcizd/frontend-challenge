@@ -1,0 +1,15 @@
+.cards {
+	padding-top: 36px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 47px;
+}
+
+.loadingBanner {
+	width: 100%;
+	text-align: center;
+	padding: 48px 0 31px 0;
+	font-weight: 400;
+	font-size: 14px;
+}
